@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taller Max Bogotá | Baterías para carro a domicilio</title>
+  <meta name="description" content="Taller automotriz en Bogotá especializado en diagnóstico, asistencia, suministro e instalación de baterías para carro a domicilio con atención profesional.">
+  <meta name="keywords" content="baterías para carro Bogotá, venta de baterías, envío de baterías, batería 24/7, Taller Max Bogotá, batería de carro, servicio urgente batería">
+  <meta name="author" content="Taller Max Bogotá">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Taller Max Bogotá | Asistencia e instalación de baterías para carro en Bogotá 24/7">
+  <meta property="og:description" content="La mejor solución para tu batería. Servicio a domicilio en Bogotá. Baterías de alta calidad con entrega rápida.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://recargamax.com">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=1200&q=80">
+  <meta property="og:locale" content="es_CO">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#020B18">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect x='12' y='8' width='40' height='48' rx='8' fill='%234A0E4E'/><rect x='18' y='14' width='28' height='10' rx='4' fill='%23B86BFF'/><rect x='18' y='30' width='28' height='10' rx='4' fill='%23B86BFF'/><circle cx='32' cy='48' r='6' fill='%23F5A623'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    :root {
+      --morado-profundo: #020B18;
+      --morado-oscuro: #031A2E;
+      --morado-medio: #063B5C;
+      --morado-vibrante: #007BFF;
+      --morado-claro: #00E5FF;
+      --morado-neon: #66FFF0;
+      --negro: #0A0A0A;
+      --negro-suave: #1A1A1A;
+      --blanco: #FFFFFF;
+      --gris-claro: #E0E0E0;
+      --gris-texto: #B0B0B0;
+      --amarillo-bolt: #00FF88;
+      --sombra-morada: 0 8px 32px rgba(0, 229, 255, 0.22);
+      --sombra-neon: 0 0 44px rgba(0, 255, 136, 0.18);
+      --transicion: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --borde-radius: 16px;
+      --borde-radius-lg: 24px;
+      --max-width: 1200px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--negro);
+      color: var(--blanco);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== PRELOADER ===== */
+    #preloader {
+      position: fixed;
+      inset: 0;
+      background: var(--morado-profundo);
+      z-index: 99999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+    #preloader.oculto { opacity: 0; visibility: hidden; pointer-events: none; }
+    .preloader-bolt {
+      position: relative;
+      width: 80px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .preloader-bolt i {
+      font-size: 4rem;
+      color: var(--morado-claro);
+      animation: boltPulse 1s ease-in-out infinite alternate;
+      filter: drop-shadow(0 0 30px rgba(0, 229, 255, 0.5));
+    }
+    @keyframes boltPulse {
+      0% { transform: scale(0.9) rotate(-5deg); opacity: 0.6; }
+      100% { transform: scale(1.2) rotate(5deg); opacity: 1; }
+    }
+    .preloader-anillo {
+      position: absolute;
+      border-radius: 50%;
+      border: 2px solid rgba(0, 229, 255, 0.15);
+      animation: ringExpand 1.8s ease-out infinite;
+    }
+    .preloader-anillo:nth-child(1) { width: 100px; height: 100px; animation-delay: 0s; }
+    .preloader-anillo:nth-child(2) { width: 140px; height: 140px; animation-delay: 0.6s; }
+    .preloader-anillo:nth-child(3) { width: 180px; height: 180px; animation-delay: 1.2s; }
+    @keyframes ringExpand {
+      0% { transform: scale(0.5); opacity: 0.8; }
+      100% { transform: scale(1.2); opacity: 0; }
+    }
+    .preloader-texto {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--blanco);
+      margin-top: 24px;
+      opacity: 0;
+      animation: aparecer 0.6s ease 0.6s forwards;
+      letter-spacing: 2px;
+    }
+    .preloader-texto span { color: var(--morado-claro); }
+    .preloader-sub {
+      color: var(--gris-texto);
+      font-size: 0.9rem;
+      margin-top: 4px;
+      opacity: 0;
+      animation: aparecer 0.6s ease 0.9s forwards;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    @keyframes aparecer { to { opacity: 1; } }
+    .btn-saltar {
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      background: rgba(0, 229, 255, 0.1);
+      color: var(--gris-texto);
+      border: 1px solid rgba(0, 229, 255, 0.2);
+      padding: 8px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-family: 'Inter', sans-serif;
+      transition: var(--transicion);
+    }
+    .btn-saltar:hover { background: rgba(0, 229, 255, 0.2); color: var(--blanco); }
+
+    /* ===== FONDO FUTURISTA ===== */
+    #fondoFuturista {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      background: radial-gradient(ellipse at 30% 40%, #03182A 0%, #0A0A0A 70%);
+      overflow: hidden;
+    }
+    #fondoFuturista .grid-lineas {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(0, 229, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    #fondoFuturista .circulo-glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+    }
+    #fondoFuturista .circulo-glow:nth-child(2) {
+      width: 500px;
+      height: 500px;
+      top: -10%;
+      right: -5%;
+      background: rgba(0, 123, 255, 0.25);
+      animation: glowFloat 20s ease-in-out infinite alternate;
+    }
+    #fondoFuturista .circulo-glow:nth-child(3) {
+      width: 400px;
+      height: 400px;
+      bottom: -10%;
+      left: -5%;
+      background: rgba(0, 229, 255, 0.1);
+      animation: glowFloat 25s ease-in-out infinite alternate-reverse;
+    }
+    #fondoFuturista .circulo-glow:nth-child(4) {
+      width: 200px;
+      height: 200px;
+      top: 40%;
+      left: 40%;
+      background: rgba(0, 255, 136, 0.05);
+      animation: glowFloat 18s ease-in-out infinite alternate;
+    }
+    @keyframes glowFloat {
+      0% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(40px, -30px) scale(1.2); }
+      66% { transform: translate(-20px, 20px) scale(0.9); }
+      100% { transform: translate(30px, -10px) scale(1.1); }
+    }
+    #fondoFuturista .particula {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: var(--morado-claro);
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+      animation: particulaFloat 8s ease-in-out infinite;
+      opacity: 0.3;
+    }
+    @keyframes particulaFloat {
+      0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.2; }
+      50% { transform: translate(50px, -80px) scale(1.5); opacity: 0.6; }
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 12px 0;
+      transition: var(--transicion);
+      background: rgba(10, 10, 10, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0, 229, 255, 0.08);
+    }
+    header.scrolled {
+      background: rgba(10, 10, 10, 0.9);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+      padding: 8px 0;
+    }
+    .header-contenedor {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 900;
+      font-size: 1.3rem;
+      color: var(--blanco);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 1001;
+      letter-spacing: 1px;
+    }
+    .logo .icono {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--morado-vibrante), var(--morado-medio));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--amarillo-bolt);
+      font-size: 1.1rem;
+      box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+    }
+    .logo span { color: var(--morado-claro); }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 4px;
+      align-items: center;
+    }
+    nav ul li a {
+      color: var(--gris-claro);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: 20px;
+      transition: var(--transicion);
+      white-space: nowrap;
+    }
+    nav ul li a:hover,
+    nav ul li a.activo {
+      color: var(--morado-claro);
+      background: rgba(0, 229, 255, 0.08);
+      text-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+    }
+    .btn-wsp-nav {
+      background: var(--morado-vibrante) !important;
+      color: var(--blanco) !important;
+      font-weight: 700 !important;
+      padding: 10px 20px !important;
+      border-radius: 25px !important;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transicion);
+      font-size: 0.85rem !important;
+    }
+    .btn-wsp-nav:hover {
+      background: var(--morado-claro) !important;
+      box-shadow: 0 0 30px rgba(0, 229, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .hamburguesa {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      z-index: 1001;
+      padding: 8px;
+      background: none;
+      border: none;
+    }
+    .hamburguesa span {
+      width: 28px;
+      height: 3px;
+      background: var(--blanco);
+      border-radius: 3px;
+      transition: var(--transicion);
+    }
+    .hamburguesa.activo span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); background: var(--morado-claro); }
+    .hamburguesa.activo span:nth-child(2) { opacity: 0; }
+    .hamburguesa.activo span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); background: var(--morado-claro); }
+
+    @media (max-width: 1024px) {
+      .hamburguesa { display: flex; }
+      nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        max-width: 85vw;
+        height: 100vh;
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(30px);
+        padding: 100px 30px 40px;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 999;
+        border-left: 1px solid rgba(0, 229, 255, 0.08);
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
+      }
+      nav.activo { right: 0; }
+      nav ul { flex-direction: column; gap: 2px; align-items: stretch; }
+      nav ul li a { display: block; padding: 14px 18px; font-size: 1rem; border-radius: 12px; }
+      .btn-wsp-nav { justify-content: center; margin-top: 10px; }
+    }
+
+    /* ===== SECCIONES ===== */
+    .seccion {
+      position: relative;
+      z-index: 1;
+      padding: 80px 24px;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    @media (max-width: 768px) { .seccion { padding: 56px 16px; } }
+    .seccion-titulo {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    .seccion-titulo h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--blanco);
+      margin-bottom: 8px;
+      text-shadow: 0 0 30px rgba(0, 229, 255, 0.1);
+    }
+    .seccion-titulo h2 span { color: var(--morado-claro); }
+    .seccion-titulo p {
+      color: var(--gris-texto);
+      font-size: 1rem;
+      max-width: 580px;
+      margin: 0 auto;
+      opacity: 0.8;
+    }
+    @media (max-width: 768px) {
+      .seccion-titulo h2 { font-size: 1.7rem; }
+      .seccion-titulo p { font-size: 0.9rem; }
+    }
+
+    /* ===== HERO ===== */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      padding: 120px 24px 60px;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      width: 100%;
+    }
+    .hero-contenido { animation: fadeUp 0.8s ease forwards; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-insignia {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 229, 255, 0.08);
+      border: 1px solid rgba(0, 229, 255, 0.15);
+      padding: 6px 16px;
+      border-radius: 25px;
+      font-size: 0.8rem;
+      color: var(--morado-claro);
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+    .hero-insignia i { color: var(--amarillo-bolt); font-size: 0.6rem; animation: pulso 2s infinite; }
+    @keyframes pulso { 0%,100% { opacity: 0.5; } 50% { opacity: 1; } }
+    .hero-titulo {
+      font-size: 2.8rem;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      color: var(--blanco);
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+    .hero-titulo span { 
+      background: linear-gradient(135deg, var(--morado-claro), var(--amarillo-bolt));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-subtitulo {
+      font-size: 1.05rem;
+      color: var(--gris-texto);
+      margin-bottom: 22px;
+      max-width: 460px;
+      opacity: 0.85;
+    }
+    .hero-botones {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    .btn-primario {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--morado-vibrante), var(--morado-medio));
+      color: var(--blanco);
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: var(--transicion);
+      border: none;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      box-shadow: 0 0 30px rgba(0, 229, 255, 0.15);
+    }
+    .btn-primario:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 50px rgba(0, 229, 255, 0.3);
+    }
+    .btn-secundario {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      color: var(--morado-claro);
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      border: 2px solid var(--morado-claro);
+      transition: var(--transicion);
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+    }
+    .btn-secundario:hover {
+      background: rgba(0, 229, 255, 0.05);
+      box-shadow: 0 0 30px rgba(0, 229, 255, 0.1);
+    }
+    .hero-indicadores {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 0.8rem;
+      color: var(--gris-texto);
+    }
+    .hero-indicadores span { display: flex; align-items: center; gap: 6px; }
+    .hero-indicadores i { color: var(--amarillo-bolt); }
+
+    .hero-imagen {
+      position: relative;
+      animation: fadeUp 0.8s ease 0.15s forwards;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+    .circulo-bateria {
+      width: 100%;
+      aspect-ratio: 1/1;
+      max-width: 420px;
+      margin: 0 auto;
+      background: radial-gradient(circle at 40% 45%, rgba(0, 229, 255, 0.08) 0%, rgba(0, 123, 255, 0.15) 60%, transparent 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid rgba(0, 229, 255, 0.1);
+      box-shadow: 0 0 60px rgba(0, 229, 255, 0.05);
+      position: relative;
+    }
+    .circulo-bateria i {
+      font-size: 7rem;
+      color: var(--morado-claro);
+      opacity: 0.7;
+      animation: flotar 4s ease-in-out infinite;
+      filter: drop-shadow(0 0 40px rgba(0, 229, 255, 0.2));
+    }
+    @keyframes flotar { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+    .burbuja-neon {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(0, 229, 255, 0.05);
+      pointer-events: none;
+      animation: flotar 4s ease-in-out infinite;
+      border: 1px solid rgba(0, 229, 255, 0.05);
+    }
+
+    @media (max-width: 968px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 30px; }
+      .hero-imagen { order: -1; max-width: 280px; margin: 0 auto; }
+      .hero-titulo { font-size: 2rem; }
+      .hero-subtitulo { font-size: 0.95rem; }
+      #hero { padding: 100px 16px 40px; }
+    }
+
+    /* ===== FORMULARIO RÁPIDO ===== */
+    .formulario-rapido {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(16px);
+      border-radius: var(--borde-radius-lg);
+      padding: 24px 20px;
+      border: 1px solid rgba(0, 229, 255, 0.08);
+      box-shadow: var(--sombra-morada);
+      margin-top: 20px;
+      max-width: 500px;
+    }
+    .formulario-rapido h4 {
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+      color: var(--morado-claro);
+      font-family: 'Orbitron', sans-serif;
+    }
+    .form-rapido-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    @media (max-width: 480px) { .form-rapido-grid { grid-template-columns: 1fr; } }
+    .form-rapido-grid input,
+    .form-rapido-grid select {
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 229, 255, 0.15);
+      background: rgba(255, 255, 255, 0.03);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      color: var(--blanco);
+      transition: var(--transicion);
+      width: 100%;
+    }
+    .form-rapido-grid input::placeholder { color: var(--gris-texto); }
+    .form-rapido-grid input:focus,
+    .form-rapido-grid select:focus {
+      outline: none;
+      border-color: var(--morado-claro);
+      box-shadow: 0 0 20px rgba(0, 229, 255, 0.05);
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .form-rapido-grid select option { background: var(--negro); color: var(--blanco); }
+    .ancho-completo { grid-column: 1 / -1; }
+    .btn-form-rapido {
+      grid-column: 1 / -1;
+      padding: 12px;
+      background: linear-gradient(135deg, var(--morado-vibrante), var(--morado-medio));
+      color: var(--blanco);
+      border: none;
+      border-radius: 25px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: var(--transicion);
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .btn-form-rapido:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 40px rgba(0, 229, 255, 0.2);
+    }
+
+    /* ===== BARRA CONFIANZA ===== */
+    .barra-confianza {
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(0, 229, 255, 0.05);
+      border-bottom: 1px solid rgba(0, 229, 255, 0.05);
+      padding: 24px 0;
+      position: relative;
+      z-index: 1;
+    }
+    .barra-confianza-grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .barra-item {
+      text-align: center;
+      flex: 1;
+      min-width: 100px;
+      padding: 8px;
+      border-radius: 12px;
+      transition: var(--transicion);
+      cursor: default;
+    }
+    .barra-item:hover { background: rgba(0, 229, 255, 0.03); transform: translateY(-3px); }
+    .barra-item i {
+      font-size: 1.6rem;
+      color: var(--morado-claro);
+      margin-bottom: 4px;
+      transition: var(--transicion);
+    }
+    .barra-item:hover i { color: var(--morado-neon); transform: scale(1.1); }
+    .barra-item p {
+      font-weight: 600;
+      font-size: 0.8rem;
+      color: var(--gris-claro);
+    }
+
+    /* ===== TARJETAS SERVICIOS ===== */
+    .servicios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 20px;
+    }
+    .servicio-card {
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(0, 229, 255, 0.06);
+      border-radius: var(--borde-radius-lg);
+      padding: 28px 22px;
+      transition: var(--transicion);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+    .servicio-card:hover {
+      border-color: rgba(0, 229, 255, 0.2);
+      transform: translateY(-6px);
+      box-shadow: 0 0 40px rgba(0, 229, 255, 0.05);
+    }
+    .servicio-card::after {
+      content: '';
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle, rgba(0, 229, 255, 0.05) 0%, transparent 70%);
+      border-radius: 50%;
+      transition: var(--transicion);
+    }
+    .servicio-card:hover::after { transform: scale(2.5); opacity: 0.6; }
+    .servicio-icono {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, rgba(0, 229, 255, 0.1), rgba(0, 123, 255, 0.2));
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      color: var(--morado-claro);
+      margin-bottom: 14px;
+      position: relative;
+      z-index: 1;
+    }
+    .servicio-card h3 {
+      font-size: 1.05rem;
+      color: var(--blanco);
+      margin-bottom: 4px;
+      position: relative;
+      z-index: 1;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 600;
+    }
+    .servicio-card p {
+      font-size: 0.85rem;
+      color: var(--gris-texto);
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+      opacity: 0.85;
+    }
+    .servicio-card .btn-solicitar {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--morado-claro);
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-decoration: none;
+      position: relative;
+      z-index: 1;
+      transition: var(--transicion);
+    }
+    .servicio-card .btn-solicitar:hover { color: var(--amarillo-bolt); gap: 10px; }
+
+    /* ===== CÓMO FUNCIONA ===== */
+    .pasos-contenedor {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+    }
+    .pasos-linea {
+      position: absolute;
+      top: 40px;
+      left: 8%;
+      right: 8%;
+      height: 2px;
+      z-index: 0;
+      pointer-events: none;
+      background: linear-gradient(90deg, transparent, var(--morado-claro), var(--amarillo-bolt), var(--morado-claro), transparent);
+      opacity: 0.2;
+    }
+    @media (max-width: 768px) {
+      .pasos-linea { display: none; }
+      .pasos-contenedor { flex-direction: column; align-items: stretch; gap: 14px; }
+    }
+    .paso {
+      flex: 1;
+      min-width: 180px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(12px);
+      border-radius: var(--borde-radius-lg);
+      padding: 28px 18px;
+      border: 1px solid rgba(0, 229, 255, 0.06);
+      transition: var(--transicion);
+    }
+    .paso:hover {
+      border-color: rgba(0, 229, 255, 0.15);
+      box-shadow: 0 0 40px rgba(0, 229, 255, 0.03);
+      transform: translateY(-4px);
+    }
+    .paso-numero {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--morado-vibrante), var(--morado-medio));
+      color: var(--blanco);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin: 0 auto 12px;
+      font-family: 'Orbitron', sans-serif;
+      box-shadow: 0 0 30px rgba(0, 229, 255, 0.1);
+    }
+    .paso h4 { font-size: 0.9rem; color: var(--blanco); margin-bottom: 2px; font-family: 'Orbitron', sans-serif; }
+    .paso p { font-size: 0.8rem; color: var(--gris-texto); opacity: 0.8; }
+
+    /* ===== COBERTURA ===== */
+    .cobertura-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    @media (max-width: 768px) { .cobertura-grid { grid-template-columns: 1fr; } }
+    .cobertura-mapa {
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(8px);
+      border-radius: var(--borde-radius-lg);
+      padding: 30px;
+      text-align: center;
+      border: 1px solid rgba(0, 229, 255, 0.06);
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .cobertura-mapa i { font-size: 4.5rem; color: var(--morado-claro); opacity: 0.25; margin-bottom: 10px; }
+    .zonas-lista {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      list-style: none;
+    }
+    .zonas-lista li {
+      padding: 8px 12px;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 8px;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border-left: 3px solid var(--morado-claro);
+      color: var(--gris-claro);
+      font-weight: 500;
+    }
+    .zonas-lista li i { color: var(--morado-claro); font-size: 0.6rem; }
+    .consulta-cobertura {
+      display: flex;
+      gap: 10px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+    .consulta-cobertura input {
+      flex: 1;
+      min-width: 160px;
+      padding: 10px 16px;
+      border-radius: 25px;
+      border: 1px solid rgba(0, 229, 255, 0.15);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--blanco);
+    }
+    .consulta-cobertura input::placeholder { color: var(--gris-texto); }
+    .consulta-cobertura button {
+      padding: 10px 20px;
+      border-radius: 25px;
+      background: linear-gradient(135deg, var(--morado-vibrante), var(--morado-medio));
+      color: var(--blanco);
+      border: none;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: var(--transicion);
+      white-space: nowrap;
+      font-size: 0.85rem;
+    }
+    .consulta-cobertura button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px rgba(0, 229, 255, 0.15);
+    }
+
+    /* ===== BENEFICIOS ===== */
+    .beneficios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+    }
+    .beneficio-item {
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(12px);
+      border-radius: var(--borde-radius);
+      padding: 22px 18px;
+      text-align: center;
+      border: 1px solid rgba(0, 229, 255, 0.06);
+      transition: var(--transicion);
+    }
+    .beneficio-item:hover {
+      border-color: rgba(0, 229, 255, 0.15);
+      box-shadow: 0 0 40px rgba(0, 229, 255, 0.03);
+      transform: translateY(-3px);
+    }
+    .beneficio-item i { font-size: 1.8rem; color: var(--morado-claro); margin-bottom: 8px; }
+    .beneficio-item h4 { font-size: 0.9rem; color: var(--blanco); margin-bottom: 2px; font-family: 'Orbitron', sans-serif; font-weight: 600; }
+    .beneficio-item p { font-size: 0.78rem; color: var(--gris-texto); opacity: 0.8; }
+
+    /* ===== PLANES ===== */
+    .planes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .plan-card {
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(12px);
+      border-radius: var(--borde-radius-lg);
+      padding: 30px 22px;
+      text-align: center;
+      border: 1px solid rgba(0, 229, 255, 0.06);
+      transition: var(--transicion);
+      position: relative;
+      overflow: hidden;
+    }
+    .plan-card:hover {
+      border-color: rgba(0, 229, 255, 0.2);
+      box-shadow: 0 0 40px rgba(0, 229, 255, 0.05);
+      transform: translateY(-6px);
+    }
+    .plan-card.destacado {
+      border-color: var(--morado-claro);
+      box-shadow: 0 0 30px rgba(0, 229, 255, 0.05);
+    }
+    .plan-card .plan-icono { font-size: 2.8rem; margin-bottom: 10px; }
+    .plan-card h3 { font-size: 1.2rem; color: var(--blanco); margin-bottom: 4px; font-family: 'Orbitron', sans-serif; }
+    .plan-card p { font-size: 0.85rem; color: var(--gris-texto); margin-bottom: 14px; opacity: 0.8; }
+    .plan-card .btn-plan {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--morado-vibrante), var(--morado-medio));
+      color: var(--blanco);
+      padding: 12px 22px;
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transicion);
+      font-size: 0.85rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .plan-card .btn-plan:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px rgba(0, 229, 255, 0.15);
+    }
+
+    /* ===== TESTIMONIOS ===== */
+    .testimonios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+    .testimonio-card {
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(12px);
+      border-radius: var(--borde-radius-lg);
+      padding: 22px;
+      border: 1px solid rgba(0, 229, 255, 0.06);
+      transition: var(--transicion);
+      border-left: 4px solid var(--morado-claro);
+    }
+    .testimonio-card:hover { box-shadow: 0 0 40px rgba(0, 229, 255, 0.03); transform: translateY(-2px); }
+    .testimonio-card .comillas { font-size: 1.8rem; color: var(--morado-claro); opacity: 0.2; line-height: 1; }
+    .testimonio-card p { font-size: 0.85rem; color: var(--gris-claro); font-style: italic; margin: 6px 0; }
+    .testimonio-card .autor { font-weight: 700; color: var(--morado-claro); font-size: 0.85rem; }
+    .testimonio-card .etiqueta { font-size: 0.7rem; color: var(--gris-texto); font-weight: 500; }
+
+    /* ===== FAQ ===== */
+    .faq-acordeon { max-width: 750px; margin: 0 auto; }
+    .faq-item {
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(12px);
+      border-radius: var(--borde-radius);
+      margin-bottom: 8px;
+      border: 1px solid rgba(0, 229, 255, 0.06);
+      overflow: hidden;
+      transition: var(--transicion);
+    }
+    .faq-item:hover { border-color: rgba(0, 229, 255, 0.1); }
+    .faq-pregunta {
+      padding: 16px 20px;
+      cursor: pointer;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: var(--transicion);
+      font-size: 0.9rem;
+      color: var(--blanco);
+    }
+    .faq-pregunta:hover { color: var(--morado-claro); }
+    .faq-pregunta i { transition: transform 0.3s ease; color: var(--morado-claro); font-size: 0.8rem; }
+    .faq-item.activo .faq-pregunta i { transform: rotate(180deg); }
+    .faq-respuesta {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+    .faq-item.activo .faq-respuesta {
+      max-height: 250px;
+      padding: 0 20px 16px;
+    }
+    .faq-respuesta p { color: var(--gris-texto); font-size: 0.85rem; opacity: 0.85; }
+
+    /* ===== CTA FINAL ===== */
+    .cta-final {
+      background: linear-gradient(145deg, var(--morado-profundo) 0%, var(--morado-oscuro) 100%);
+      text-align: center;
+      padding: 64px 24px;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      color: var(--blanco);
+      border-top: 1px solid rgba(0, 229, 255, 0.05);
+    }
+    .cta-final::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 20% 50%, rgba(0, 229, 255, 0.03) 0%, transparent 60%),
+                  radial-gradient(circle at 80% 50%, rgba(0, 255, 136, 0.02) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .cta-final-contenido {
+      position: relative;
+      z-index: 2;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .cta-final h2 { font-size: 2.2rem; font-weight: 900; margin-bottom: 10px; color: var(--blanco); font-family: 'Orbitron', sans-serif; }
+    .cta-final h2 span { color: var(--morado-claro); }
+    .cta-final p { font-size: 1rem; opacity: 0.7; margin-bottom: 22px; }
+    .btn-cta-pulso {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--morado-vibrante), var(--morado-medio));
+      color: var(--blanco);
+      padding: 16px 34px;
+      border-radius: 35px;
+      font-weight: 800;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: var(--transicion);
+      animation: pulsoBoton 2.5s infinite;
+      font-family: 'Inter', sans-serif;
+    }
+    @keyframes pulsoBoton {
+      0%,100% { box-shadow: 0 0 0 0 rgba(0, 229, 255, 0.3); }
+      50% { box-shadow: 0 0 0 20px rgba(0, 229, 255, 0); }
+    }
+    .btn-cta-pulso:hover {
+      transform: scale(1.04);
+      animation: none;
+      box-shadow: 0 0 50px rgba(0, 229, 255, 0.2);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--morado-profundo);
+      padding: 44px 24px 20px;
+      position: relative;
+      z-index: 1;
+      color: rgba(255,255,255,0.5);
+      border-top: 1px solid rgba(0, 229, 255, 0.05);
+    }
+    .footer-grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 28px;
+    }
+    @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }
+    .footer-col h4 {
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+      color: var(--morado-claro);
+      font-family: 'Orbitron', sans-serif;
+    }
+    .footer-col p, .footer-col a {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 6px;
+      transition: var(--transicion);
+    }
+    .footer-col a:hover { color: var(--morado-claro); }
+    .footer-copy {
+      max-width: var(--max-width);
+      margin: 28px auto 0;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.04);
+      text-align: center;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.25);
+    }
+
+    /* ===== BOTONES FLOTANTES ===== */
+    .btn-flotante-wsp {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 998;
+      background: #25D366;
+      color: white;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      text-decoration: none;
+      box-shadow: 0 8px 28px rgba(37, 211, 102, 0.3);
+      transition: var(--transicion);
+    }
+    .btn-flotante-wsp:hover { transform: scale(1.1); box-shadow: 0 12px 36px rgba(37, 211, 102, 0.5); }
+    .btn-flotante-arriba {
+      position: fixed;
+      bottom: 96px;
+      right: 28px;
+      z-index: 998;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(12px);
+      color: var(--morado-claro);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      text-decoration: none;
+      border: 1px solid rgba(0, 229, 255, 0.1);
+      transition: var(--transicion);
+      opacity: 0;
+      pointer-events: none;
+    }
+    .btn-flotante-arriba.visible { opacity: 1; pointer-events: all; }
+    .btn-flotante-arriba:hover { background: var(--morado-vibrante); color: var(--blanco); }
+    @media (max-width: 600px) {
+      .btn-flotante-wsp { width: 48px; height: 48px; font-size: 1.3rem; bottom: 16px; right: 14px; }
+      .btn-flotante-arriba { width: 38px; height: 38px; font-size: 0.9rem; bottom: 76px; right: 14px; }
+    }
+
+    /* ===== UTILIDADES ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .notificacion {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--morado-medio);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 12px;
+      z-index: 10000;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transform: translateX(120%);
+      transition: transform 0.4s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      border: 1px solid rgba(0, 229, 255, 0.1);
+    }
+    .notificacion.visible { transform: translateX(0); }
+  
+    /* ===== TALLER MAX BOGOTÁ · FUTURE BLUE/GREEN UPGRADE ===== */
+    body { background: #010712; }
+    #fondoFuturista { background: radial-gradient(circle at 18% 22%, rgba(0,229,255,.12), transparent 32%), radial-gradient(circle at 82% 70%, rgba(0,255,136,.10), transparent 34%), linear-gradient(135deg,#010712 0%,#03182A 48%,#010A14 100%); }
+    #fondoFuturista .grid-lineas { background-image: linear-gradient(rgba(0,229,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,136,.045) 1px,transparent 1px); background-size:54px 54px; mask-image:linear-gradient(to bottom,rgba(0,0,0,.95),transparent); }
+    header { border-bottom:1px solid rgba(0,229,255,.13); box-shadow:0 10px 45px rgba(0,0,0,.22); }
+    .logo .icono,.btn-primario,.btn-form-rapido,.consulta-cobertura button,.paso-numero,.plan-card .btn-plan,.btn-cta-pulso { background:linear-gradient(135deg,#007BFF 0%,#00C6FF 45%,#00FF88 120%); box-shadow:0 0 28px rgba(0,229,255,.16); }
+    .logo span,.hero-titulo span,.seccion-titulo h2 span,.cta-final h2 span { background:linear-gradient(90deg,#00E5FF,#00FF88); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+    .servicio-card,.paso,.beneficio-item,.plan-card,.testimonio-card,.faq-item,.formulario-rapido,.cobertura-mapa { background:linear-gradient(145deg,rgba(3,24,42,.72),rgba(1,7,18,.72)); border-color:rgba(0,229,255,.12); box-shadow:inset 0 1px 0 rgba(255,255,255,.025),0 16px 45px rgba(0,0,0,.22); }
+    .servicio-card:hover,.paso:hover,.beneficio-item:hover,.plan-card:hover,.faq-item:hover { border-color:rgba(0,255,136,.34); box-shadow:0 0 0 1px rgba(0,229,255,.08),0 18px 55px rgba(0,229,255,.09); }
+    .hero-insignia { background:rgba(0,229,255,.07); border-color:rgba(0,255,136,.22); box-shadow:inset 0 0 20px rgba(0,229,255,.04); }
+    .circulo-bateria { background:radial-gradient(circle at 40% 45%,rgba(0,255,136,.10),rgba(0,123,255,.12) 58%,transparent 72%); border-color:rgba(0,229,255,.18); box-shadow:0 0 90px rgba(0,229,255,.08); }
+    .circulo-bateria::before,.circulo-bateria::after { content:''; position:absolute; inset:8%; border:1px dashed rgba(0,229,255,.22); border-radius:50%; animation:rmSpin 18s linear infinite; }
+    .circulo-bateria::after { inset:18%; border-color:rgba(0,255,136,.18); animation-direction:reverse; animation-duration:12s; }
+    @keyframes rmSpin { to { transform:rotate(360deg); } }
+    ::selection { background:#00E5FF; color:#010712; }
+
+  
+/* ===== TALLER MAX BOGOTÁ — RED FUTURE EDITION ===== */
+:root{
+ --rojo-profundo:#220006;--rojo-oscuro:#4d000b;--rojo-medio:#8e0015;
+ --rojo-vivo:#e00027;--rojo-neon:#ff1748;--rojo-claro:#ff4d68;
+ --negro:#050303;--negro-suave:#100607;--gris-texto:#b8aaad;
+ --sombra-roja:0 8px 36px rgba(255,0,45,.22);
+}
+body{background:linear-gradient(135deg,#030202,#0d0506 52%,#050303)!important}
+#fondoFuturista{background:radial-gradient(ellipse at 25% 30%,#26040a 0%,#050303 68%)!important}
+#fondoFuturista .grid-lineas{background-image:linear-gradient(rgba(255,23,72,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,23,72,.045) 1px,transparent 1px)!important;background-size:55px 55px!important;animation:redGrid 5s ease-in-out infinite alternate}
+@keyframes redGrid{from{opacity:.35}to{opacity:.9}}
+#fondoFuturista .circulo-glow:nth-child(2){background:rgba(224,0,39,.20)!important}
+#fondoFuturista .circulo-glow:nth-child(3){background:rgba(255,23,72,.12)!important}
+#fondoFuturista .circulo-glow:nth-child(4){background:rgba(142,0,21,.12)!important}
+header{background:rgba(5,3,3,.72)!important;border-bottom:1px solid rgba(255,23,72,.14)!important}
+.logo .icono,.btn-primario,.btn-form-rapido,.consulta-cobertura button,.paso-numero,.plan-card .btn-plan,.btn-cta-pulso,.btn-wsp-nav{
+ background:linear-gradient(135deg,#ff4d68,#e00027 48%,#780011)!important;
+ box-shadow:0 0 30px rgba(255,0,50,.20)!important
+}
+.logo span,.hero-insignia,.formulario-rapido h4,.barra-item i,.servicio-icono,.servicio-card .btn-solicitar,.beneficio-item i,.faq-pregunta i,.footer-col h4{color:#ff4d68!important}
+.hero-titulo span,.seccion-titulo h2 span{
+ background:linear-gradient(90deg,#ff7187,#ff1748,#b0001d)!important;
+ -webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important
+}
+.btn-secundario{color:#ff4d68!important;border-color:#ff1748!important}
+.btn-secundario:hover{background:rgba(255,23,72,.08)!important;box-shadow:0 0 30px rgba(255,0,50,.14)!important}
+.formulario-rapido,.servicio-card,.paso,.cobertura-mapa,.beneficio-item,.plan-card,.testimonio-card,.faq-item{
+ background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,0,40,.022))!important;
+ border-color:rgba(255,77,104,.12)!important;
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.035),0 18px 48px rgba(0,0,0,.26)!important
+}
+.servicio-card:hover,.paso:hover,.beneficio-item:hover,.plan-card:hover{
+ border-color:rgba(255,23,72,.55)!important;transform:translateY(-7px)!important;
+ box-shadow:0 0 42px rgba(255,0,45,.12),0 24px 55px rgba(0,0,0,.38)!important
+}
+.cta-final{background:linear-gradient(145deg,#190408,#070303)!important}
+footer{background:#050202!important}
+.btn-flotante-wsp{background:linear-gradient(145deg,#ff3155,#a6001a)!important;box-shadow:0 10px 34px rgba(255,0,45,.30)!important}
+
+</style>
+</head>
+<body>
+
+  <!-- ===== PRELOADER ===== -->
+  <div id="preloader">
+    <div class="preloader-bolt">
+      <i class="fas fa-bolt"></i>
+      <div class="preloader-anillo"></div>
+      <div class="preloader-anillo"></div>
+      <div class="preloader-anillo"></div>
+    </div>
+    <div class="preloader-texto">Recarga <span>Max</span></div>
+    <div class="preloader-sub">La mejor solución para tu batería</div>
+    <button class="btn-saltar" id="btnSaltar">Saltar</button>
+  </div>
+
+  <!-- ===== FONDO FUTURISTA ===== -->
+  <div id="fondoFuturista">
+    <div class="grid-lineas"></div>
+    <div class="circulo-glow"></div>
+    <div class="circulo-glow"></div>
+    <div class="circulo-glow"></div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header id="header">
+    <div class="header-contenedor">
+      <a href="#hero" class="logo">
+        <div class="icono"><i class="fas fa-bolt"></i></div>
+        Recarga <span>Max</span>
+      </a>
+      <button class="hamburguesa" id="hamburguesa" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav">
+        <ul>
+          <li><a href="#hero" class="activo">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#cobertura">Cobertura</a></li>
+          <li><a href="#como-funciona">Cómo funciona</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#terminos">Términos</a></li><li><a href="#contacto">Contacto</a></li>
+          <li><a href="https://wa.me/573171534659?text=Hola,%20necesito%20una%20batería%20para%20mi%20carro%20en%20Bogotá." target="_blank" rel="noopener" class="btn-wsp-nav"><i class="fab fa-whatsapp"></i> Solicitar servicio</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="seccion">
+    <div class="hero-grid">
+      <div class="hero-contenido">
+        <div class="hero-insignia">
+          <i class="fas fa-circle"></i> 24/7 · Servicio a domicilio en Bogotá
+        </div>
+        <h1 class="hero-titulo">La mejor solución para tu <span>batería</span></h1>
+        <p class="hero-subtitulo">Asistencia e instalación de baterías para carro en Bogotá las 24 horas. Servicio rápido, confiable y con la mejor tecnología. Taller Max Bogotá, asistencia profesional donde la necesites.</p>
+        <div class="hero-botones">
+          <a href="https://wa.me/573171534659?text=Hola,%20necesito%20una%20batería%20para%20mi%20carro%20en%20Bogotá." target="_blank" rel="noopener" class="btn-primario"><i class="fab fa-whatsapp"></i> Solicitar asistencia</a>
+          <a href="#cobertura" class="btn-secundario"><i class="fas fa-map-marker-alt"></i> Ver cobertura</a>
+        </div>
+        <div class="hero-indicadores">
+          <span><i class="fas fa-check-circle"></i> Envío 24/7</span>
+          <span><i class="fas fa-check-circle"></i> Servicio urgente</span>
+          <span><i class="fas fa-check-circle"></i> Bogotá</span>
+        </div>
+        <div class="formulario-rapido" id="formRapido">
+          <h4>⚡ Solicitud rápida por WhatsApp</h4>
+          <div class="form-rapido-grid">
+            <input type="text" id="rapidoNombre" placeholder="Nombre *" required>
+            <input type="tel" id="rapidoTelefono" placeholder="Teléfono *" required>
+            <input type="text" id="rapidoCiudad" placeholder="Ciudad *" required class="ancho-completo">
+            <input type="text" id="rapidoBarrio" placeholder="Barrio o localidad">
+            <select id="rapidoServicio">
+              <option value="">Tipo de batería</option>
+              <option value="Batería de carro">Batería de carro</option>
+              <option value="Batería de camioneta">Batería de camioneta</option>
+              <option value="Batería de moto">Batería de moto</option>
+              <option value="Batería industrial">Batería industrial</option>
+              <option value="Servicio urgente">Servicio urgente</option>
+            </select>
+            <input type="text" id="rapidoModelo" placeholder="Modelo de vehículo">
+            <button type="button" class="btn-form-rapido ancho-completo" id="btnFormRapido"><i class="fab fa-whatsapp"></i> Enviar solicitud</button>
+          </div>
+        </div>
+      </div>
+      <div class="hero-imagen">
+        <div class="circulo-bateria">
+          <i class="fas fa-bolt"></i>
+          <div class="burbuja-neon" style="width:30px;height:30px;top:12%;left:10%;animation-duration:3s;"></div>
+          <div class="burbuja-neon" style="width:16px;height:16px;top:22%;right:16%;animation-duration:3.5s;animation-delay:0.5s;"></div>
+          <div class="burbuja-neon" style="width:24px;height:24px;bottom:18%;left:18%;animation-duration:4s;animation-delay:1s;"></div>
+          <div class="burbuja-neon" style="width:12px;height:12px;bottom:28%;right:20%;animation-duration:2.8s;animation-delay:0.3s;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BARRA DE CONFIANZA ===== -->
+  <div class="barra-confianza">
+    <div class="barra-confianza-grid">
+      <div class="barra-item"><i class="fas fa-bolt"></i><p>Energía garantizada</p></div>
+      <div class="barra-item"><i class="fas fa-truck"></i><p>Envío a domicilio</p></div>
+      <div class="barra-item"><i class="fas fa-clock"></i><p>24/7 en Bogotá</p></div>
+      <div class="barra-item"><i class="fas fa-certificate"></i><p>Baterías de calidad</p></div>
+      <div class="barra-item"><i class="fas fa-tools"></i><p>Instalación disponible</p></div>
+      <div class="barra-item"><i class="fab fa-whatsapp"></i><p>Pedidos por WhatsApp</p></div>
+    </div>
+  </div>
+
+  <!-- ===== SERVICIOS ===== -->
+  <section id="servicios" class="seccion">
+    <div class="seccion-titulo fade-in">
+      <h2>Nuestros <span>Servicios</span></h2>
+      <p>Soluciones completas en baterías para todo tipo de vehículos, con entrega rápida en Bogotá.</p>
+    </div>
+    <div class="servicios-grid">
+      <div class="servicio-card fade-in">
+        <div class="servicio-icono"><i class="fas fa-car"></i></div>
+        <h3>Baterías para carro</h3>
+        <p>Amplia variedad de baterías para todo tipo de automóviles, con la mejor calidad y rendimiento.</p>
+        <a href="https://wa.me/573171534659?text=Hola,%20necesito%20una%20batería%20para%20carro." target="_blank" rel="noopener" class="btn-solicitar">Solicitar <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="servicio-card fade-in">
+        <div class="servicio-icono"><i class="fas fa-truck"></i></div>
+        <h3>Baterías para camioneta</h3>
+        <p>Baterías de alta capacidad para camionetas y vehículos 4x4, con potencia y durabilidad.</p>
+        <a href="https://wa.me/573171534659?text=Hola,%20necesito%20una%20batería%20para%20camioneta." target="_blank" rel="noopener" class="btn-solicitar">Solicitar <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="servicio-card fade-in">
+        <div class="servicio-icono"><i class="fas fa-motorcycle"></i></div>
+        <h3>Baterías para moto</h3>
+        <p>Baterías especializadas para motocicletas, con excelente relación calidad-precio.</p>
+        <a href="https://wa.me/573171534659?text=Hola,%20necesito%20una%20batería%20para%20moto." target="_blank" rel="noopener" class="btn-solicitar">Solicitar <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="servicio-card fade-in">
+        <div class="servicio-icono"><i class="fas fa-industry"></i></div>
+        <h3>Baterías industriales</h3>
+        <p>Soluciones para maquinaria pesada, equipos y aplicaciones industriales.</p>
+        <a href="https://wa.me/573171534659?text=Hola,%20necesito%20una%20batería%20industrial." target="_blank" rel="noopener" class="btn-solicitar">Solicitar <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="servicio-card fade-in">
+        <div class="servicio-icono"><i class="fas fa-bolt"></i></div>
+        <h3>Servicio urgente</h3>
+        <p>Atención prioritaria para emergencias. Envío inmediato en Bogotá las 24 horas.</p>
+        <a href="https://wa.me/573171534659?text=Hola,%20necesito%20servicio%20urgente%20de%20batería." target="_blank" rel="noopener" class="btn-solicitar">Solicitar <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="servicio-card fade-in">
+        <div class="servicio-icono"><i class="fas fa-tools"></i></div>
+        <h3>Instalación a domicilio</h3>
+        <p>Servicio de instalación profesional en tu ubicación, sin que te muevas de casa.</p>
+        <a href="https://wa.me/573171534659?text=Hola,%20quiero%20instalación%20de%20batería%20a%20domicilio." target="_blank" rel="noopener" class="btn-solicitar">Solicitar <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CÓMO FUNCIONA ===== -->
+  <section id="como-funciona" class="seccion" style="background:rgba(0,0,0,0.2);max-width:100%;padding-left:0;padding-right:0;">
+    <div style="max-width:var(--max-width);margin:0 auto;padding:0 24px;">
+      <div class="seccion-titulo fade-in">
+        <h2>¿Cómo <span>Funciona?</span></h2>
+        <p>Un proceso rápido y sencillo para recibir tu batería en Bogotá.</p>
+      </div>
+      <div class="pasos-contenedor">
+        <div class="pasos-linea"></div>
+        <div class="paso fade-in">
+          <div class="paso-numero">1</div>
+          <h4>Contáctanos</h4>
+          <p>Escríbenos por WhatsApp indicando el tipo de batería que necesitas.</p>
+        </div>
+        <div class="paso fade-in">
+          <div class="paso-numero">2</div>
+          <h4>Modelo y ubicación</h4>
+          <p>Indícanos el modelo de tu vehículo y tu dirección en Bogotá.</p>
+        </div>
+        <div class="paso fade-in">
+          <div class="paso-numero">3</div>
+          <h4>Confirmamos disponibilidad</h4>
+          <p>Verificamos stock y te damos el precio y tiempo de entrega.</p>
+        </div>
+        <div class="paso fade-in">
+          <div class="paso-numero">4</div>
+          <h4>Recibe tu batería</h4>
+          <p>Entregamos la batería en tu ubicación, con o sin instalación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COBERTURA ===== -->
+  <section id="cobertura" class="seccion">
+    <div class="seccion-titulo fade-in">
+      <h2>Cobertura <span>24/7 en Bogotá</span></h2>
+      <p>Atendemos toda Bogotá con envíos rápidos y servicio urgente las 24 horas.</p>
+    </div>
+    <div class="cobertura-grid">
+      <div class="cobertura-mapa fade-in">
+        <i class="fas fa-map-marked-alt"></i>
+        <p style="color:var(--blanco);font-weight:600;">Cobertura en Bogotá</p>
+        <p style="color:var(--gris-texto);font-size:0.8rem;">Norte · Sur · Centro · Occidente · Localidades y barrios sujetos a disponibilidad</p>
+      </div>
+      <div class="fade-in">
+        <h3 style="margin-bottom:10px;color:var(--blanco);font-family:'Orbitron',sans-serif;">Zonas de cobertura <span style="color:var(--morado-claro);">en Bogotá</span></h3>
+        <ul class="zonas-lista">
+          <li><i class="fas fa-check-circle"></i> Norte de Bogotá</li>
+          <li><i class="fas fa-check-circle"></i> Sur de Bogotá</li>
+          <li><i class="fas fa-check-circle"></i> Centro</li>
+          <li><i class="fas fa-check-circle"></i> Occidente</li>
+          <li><i class="fas fa-check-circle"></i> Localidades principales</li>
+          <li><i class="fas fa-check-circle"></i> Barrios con disponibilidad</li>
+        </ul>
+        <p style="color:var(--gris-texto);font-size:0.75rem;margin-top:6px;">* Consulta la disponibilidad exacta para tu barrio o localidad.</p>
+        <div class="consulta-cobertura">
+          <input type="text" id="consultaBarrio" placeholder="Escribe tu localidad o barrio">
+          <button type="button" id="btnConsultaCobertura"><i class="fab fa-whatsapp"></i> Consultar</button>
+        </div>
+        <p style="color:var(--gris-texto);font-size:0.8rem;margin-top:10px;"><strong>Servicio 24/7 en Bogotá.</strong> La cobertura, tiempos y condiciones deben confirmarse con un asesor.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENEFICIOS ===== -->
+  <section id="beneficios" class="seccion" style="background:rgba(0,0,0,0.15);max-width:100%;padding-left:0;padding-right:0;">
+    <div style="max-width:var(--max-width);margin:0 auto;padding:0 24px;">
+      <div class="seccion-titulo fade-in">
+        <h2>¿Por qué <span>Taller Max Bogotá?</span></h2>
+        <p>Beneficios que nos convierten en la mejor solución para tu batería en Bogotá.</p>
+      </div>
+      <div class="beneficios-grid">
+        <div class="beneficio-item fade-in"><i class="fas fa-bolt"></i><h4>Envío 24/7</h4><p>Servicio de entrega las 24 horas en Bogotá.</p></div>
+        <div class="beneficio-item fade-in"><i class="fas fa-tachometer-alt"></i><h4>Respuesta rápida</h4><p>Atención inmediata por WhatsApp.</p></div>
+        <div class="beneficio-item fade-in"><i class="fas fa-thumbs-up"></i><h4>Baterías de calidad</h4><p>Productos de las mejores marcas.</p></div>
+        <div class="beneficio-item fade-in"><i class="fas fa-star"></i><h4>Garantía</h4><p>Respaldamos cada batería que vendemos.</p></div>
+        <div class="beneficio-item fade-in"><i class="fas fa-tools"></i><h4>Instalación</h4><p>Servicio de instalación a domicilio.</p></div>
+        <div class="beneficio-item fade-in"><i class="fas fa-car"></i><h4>Todo tipo de vehículos</h4><p>Carros, camionetas, motos y más.</p></div>
+        <div class="beneficio-item fade-in"><i class="fas fa-comments"></i><h4>Asesoría experta</h4><p>Te ayudamos a elegir la batería correcta.</p></div>
+        <div class="beneficio-item fade-in"><i class="fab fa-whatsapp"></i><h4>WhatsApp directo</h4><p>Canal rápido y eficiente.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PLANES ===== -->
+  <section class="seccion">
+    <div class="seccion-titulo fade-in">
+      <h2>Modalidades de <span>Servicio</span></h2>
+      <p>Elige la opción que mejor se adapte a tus necesidades.</p>
+    </div>
+    <div class="planes-grid">
+      <div class="plan-card fade-in">
+        <div class="plan-icono">🚗</div>
+        <h3>Batería estándar</h3>
+        <p>Para vehículos particulares que necesitan una batería confiable y duradera.</p>
+        <a href="https://wa.me/573171534659?text=Hola,%20quiero%20cotizar%20una%20batería%20estándar." target="_blank" rel="noopener" class="btn-plan">Cotizar</a>
+      </div>
+      <div class="plan-card fade-in destacado">
+        <div class="plan-icono">⚡</div>
+        <h3>Servicio urgente</h3>
+        <p>Entrega inmediata en Bogotá para emergencias. Atención prioritaria 24/7.</p>
+        <a href="https://wa.me/573171534659?text=Hola,%20necesito%20servicio%20urgente%20de%20batería." target="_blank" rel="noopener" class="btn-plan">Solicitar urgente</a>
+      </div>
+      <div class="plan-card fade-in">
+        <div class="plan-icono">🔧</div>
+        <h3>Instalación incluida</h3>
+        <p>Batería + instalación profesional en tu ubicación, sin que te muevas.</p>
+        <a href="https://wa.me/573171534659?text=Hola,%20quiero%20batería%20con%20instalación%20a%20domicilio." target="_blank" rel="noopener" class="btn-plan">Solicitar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIOS ===== -->
+  <section class="seccion" style="background:rgba(0,0,0,0.15);max-width:100%;padding-left:0;padding-right:0;">
+    <div style="max-width:var(--max-width);margin:0 auto;padding:0 24px;">
+      <div class="seccion-titulo fade-in">
+        <h2>Lo que dicen <span>nuestros clientes</span></h2>
+        <p>Experiencias reales de quienes confían en Taller Max Bogotá.</p>
+      </div>
+      <div class="testimonios-grid">
+        <div class="testimonio-card fade-in">
+          <div class="comillas">"</div>
+          <p>Llegaron en menos de 30 minutos con la batería que necesitaba. Excelente servicio, lo recomiendo.</p>
+          <p class="autor">Andrés M.</p>
+          <p class="etiqueta">Bogotá · Cliente residencial</p>
+        </div>
+        <div class="testimonio-card fade-in">
+          <div class="comillas">"</div>
+          <p>Taller Max Bogotá me salvó de una emergencia en la noche. Atención rápida y profesional. ¡Muy agradecido!</p>
+          <p class="autor">Laura P.</p>
+          <p class="etiqueta">Bogotá · Servicio urgente</p>
+        </div>
+        <div class="testimonio-card fade-in">
+          <div class="comillas">"</div>
+          <p>Compré una batería para mi camioneta y me la instalaron en mi casa. Perfecto, sin complicaciones.</p>
+          <p class="autor">Carlos G.</p>
+          <p class="etiqueta">Bogotá · Cliente satisfecho</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq" class="seccion">
+    <div class="seccion-titulo fade-in">
+      <h2>Preguntas <span>Frecuentes</span></h2>
+      <p>Respuestas claras para que tomes la mejor decisión.</p>
+    </div>
+    <div class="faq-acordeon">
+      <div class="faq-item fade-in">
+        <div class="faq-pregunta">¿Hacen envíos en toda Bogotá? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-respuesta"><p>Cubrimos las principales zonas de Bogotá. La disponibilidad exacta para tu barrio se confirma al momento de tu consulta por WhatsApp.</p></div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-pregunta">¿Cuánto tiempo tarda el envío? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-respuesta"><p>El tiempo de entrega varía según tu ubicación y la demanda. En general, ofrecemos envíos rápidos, con tiempos que se confirman al contactarnos.</p></div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-pregunta">¿Ofrecen instalación a domicilio? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-respuesta"><p>Sí, contamos con servicio de instalación profesional en tu ubicación. Puedes solicitarlo al hacer tu pedido por WhatsApp.</p></div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-pregunta">¿Qué tipos de batería manejan? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-respuesta"><p>Manejamos baterías para carros, camionetas, motos y aplicaciones industriales. Tenemos una amplia variedad de marcas y capacidades.</p></div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-pregunta">¿Tienen servicio urgente 24/7? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-respuesta"><p>Sí, ofrecemos servicio urgente las 24 horas del día, los 7 días de la semana, para emergencias en Bogotá.</p></div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-pregunta">¿Cómo puedo pagar? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-respuesta"><p>Aceptamos diferentes métodos de pago. Consulta las opciones disponibles al hacer tu pedido por WhatsApp.</p></div>
+      </div>
+    </div>
+  </section>
+
+  
+<section id="terminos" class="seccion fade-in">
+ <div class="seccion-titulo"><h2>Términos, condiciones y <span>políticas</span></h2>
+ <p>Condiciones generales para una atención automotriz transparente y profesional.</p></div>
+ <div class="faq-acordeon">
+  <div class="faq-item activo"><div class="faq-pregunta">Alcance del servicio <i class="fas fa-chevron-down"></i></div><div class="faq-respuesta"><p>Prestamos asistencia automotriz relacionada con baterías en Bogotá, incluyendo diagnóstico básico, suministro, instalación y servicios técnicamente procedentes, sujetos a cobertura, disponibilidad, compatibilidad del vehículo y condiciones seguras de atención.</p></div></div>
+  <div class="faq-item"><div class="faq-pregunta">Cotización y autorización <i class="fas fa-chevron-down"></i></div><div class="faq-respuesta"><p>El valor del servicio se informa antes de ejecutar trabajos cobrables. Puede variar según vehículo, batería, ubicación, horario y trabajo requerido. No se realizarán servicios adicionales sin autorización del cliente.</p></div></div>
+  <div class="faq-item"><div class="faq-pregunta">Garantías <i class="fas fa-chevron-down"></i></div><div class="faq-respuesta"><p>Las condiciones de garantía se informan según el producto o servicio adquirido y se atienden conforme a las condiciones comunicadas al cliente y a la normativa colombiana aplicable de protección al consumidor.</p></div></div>
+  <div class="faq-item"><div class="faq-pregunta">Datos personales <i class="fas fa-chevron-down"></i></div><div class="faq-respuesta"><p>Los datos suministrados se utilizan para gestionar solicitudes, contacto, prestación del servicio y soporte relacionado. El titular podrá ejercer los derechos que le correspondan conforme a la normativa colombiana de protección de datos personales.</p></div></div>
+  <div class="faq-item"><div class="faq-pregunta">Seguridad, tiempos y cobertura <i class="fas fa-chevron-down"></i></div><div class="faq-respuesta"><p>La atención depende de cobertura y disponibilidad. Los tiempos de llegada son estimados y pueden cambiar por tráfico, clima, demanda u otras circunstancias. El técnico podrá suspender una intervención cuando existan condiciones que comprometan la seguridad.</p></div></div>
+  <div class="faq-item"><div class="faq-pregunta">Cancelaciones <i class="fas fa-chevron-down"></i></div><div class="faq-respuesta"><p>Las cancelaciones deben informarse oportunamente. Si ya existe desplazamiento, diagnóstico o trabajo previamente autorizado, podrán aplicarse únicamente los cargos que hayan sido informados al cliente.</p></div></div>
+ </div>
+ <p style="max-width:780px;margin:20px auto 0;text-align:center;color:var(--gris-texto);font-size:.75rem">Antes de publicar, completa estos textos con la razón social, NIT, domicilio, correo, política de tratamiento de datos, condiciones de garantía y precios reales del negocio. Esta plantilla no sustituye revisión jurídica profesional.</p>
+</section>
+
+<!-- ===== CTA FINAL ===== -->
+  <div class="cta-final" id="contacto">
+    <div class="cta-final-contenido">
+      <h2>¿Necesitas una <span>batería</span> ahora?</h2>
+      <p>Solicita tu batería en pocos minutos. Servicio a domicilio en Bogotá. La mejor solución para tu vehículo.</p>
+      <a href="https://wa.me/573171534659?text=Hola,%20necesito%20una%20batería%20para%20mi%20carro%20en%20Bogotá." target="_blank" rel="noopener" class="btn-cta-pulso"><i class="fab fa-whatsapp"></i> Pedir batería por WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Taller Max Bogotá</h4>
+        <p>La mejor solución para tu batería en Bogotá. Venta y envío 24/7 con la mejor calidad y servicio.</p>
+        <p><i class="fab fa-whatsapp"></i> +57 317 153 4659</p>
+        <p><i class="fas fa-envelope"></i> info@recargamax.com</p>
+        <p><i class="fas fa-clock"></i> 24/7 · Bogotá</p>
+      </div>
+      <div class="footer-col">
+        <h4>Enlaces</h4>
+        <a href="#hero">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#cobertura">Cobertura</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <a href="#servicios">Baterías para carro</a>
+        <a href="#servicios">Baterías para camioneta</a>
+        <a href="#servicios">Baterías para moto</a>
+        <a href="#servicios">Baterías industriales</a>
+        <a href="#servicios">Servicio urgente</a>
+        <a href="#servicios">Instalación a domicilio</a>
+      </div>
+      <div class="footer-col">
+        <h4>Cobertura</h4>
+        <a href="#cobertura">Bogotá 24/7</a>
+        <h4 style="margin-top:12px;">Redes</h4>
+        <div style="display:flex;gap:12px;font-size:1.2rem;">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <p>&copy; <span id="anioCopyright"></span> Taller Max Bogotá. Todos los derechos reservados. | <a href="#" style="color:rgba(255,255,255,0.25);">Aviso de privacidad</a> | <a href="#" style="color:rgba(255,255,255,0.25);">Términos</a></p>
+      <p style="font-size:0.7rem;margin-top:2px;">Servicio 24/7 en Bogotá. Consulta disponibilidad con un asesor por WhatsApp.</p>
+    </div>
+  </footer>
+
+  <!-- ===== BOTONES FLOTANTES ===== -->
+  <a href="https://wa.me/573171534659?text=Hola,%20necesito%20una%20batería%20para%20mi%20carro%20en%20Bogotá." target="_blank" rel="noopener" class="btn-flotante-wsp" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="#hero" class="btn-flotante-arriba" id="btnArriba" aria-label="Volver arriba">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <!-- Notificación -->
+  <div class="notificacion" id="notificacion">⚡ Solicitud lista. Abriendo WhatsApp...</div>
+
+  <script>
+    // ===== PRELOADER =====
+    (function() {
+      const preloader = document.getElementById('preloader');
+      const btnSaltar = document.getElementById('btnSaltar');
+      let oculto = false;
+      function ocultar() {
+        if (oculto) return;
+        oculto = true;
+        preloader.classList.add('oculto');
+        document.body.style.overflow = '';
+      }
+      const timer = setTimeout(ocultar, 2800);
+      btnSaltar.addEventListener('click', () => { clearTimeout(timer); ocultar(); });
+      document.body.style.overflow = 'hidden';
+    })();
+
+    // ===== PARTÍCULAS EN FONDO =====
+    (function() {
+      const contenedor = document.getElementById('fondoFuturista');
+      for (let i = 0; i < 25; i++) {
+        const p = document.createElement('div');
+        p.className = 'particula';
+        p.style.left = Math.random() * 100 + '%';
+        p.style.top = Math.random() * 100 + '%';
+        p.style.width = (Math.random() * 3 + 1) + 'px';
+        p.style.height = p.style.width;
+        p.style.animationDuration = (Math.random() * 6 + 6) + 's';
+        p.style.animationDelay = (Math.random() * 8) + 's';
+        p.style.opacity = Math.random() * 0.3 + 0.1;
+        contenedor.appendChild(p);
+      }
+    })();
+
+    // ===== HEADER SCROLL =====
+    const header = document.getElementById('header');
+    const btnArriba = document.getElementById('btnArriba');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+        btnArriba.classList.add('visible');
+      } else {
+        header.classList.remove('scrolled');
+        btnArriba.classList.remove('visible');
+      }
+    });
+
+    // ===== MENÚ HAMBURGUESA =====
+    const hamburguesa = document.getElementById('hamburguesa');
+    const nav = document.getElementById('nav');
+    hamburguesa.addEventListener('click', () => {
+      hamburguesa.classList.toggle('activo');
+      nav.classList.toggle('activo');
+    });
+    document.querySelectorAll('nav ul li a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburguesa.classList.remove('activo');
+        nav.classList.remove('activo');
+      });
+    });
+
+    // ===== FADE-IN =====
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
+    fadeEls.forEach(el => observer.observe(el));
+
+    // ===== FORMULARIO RÁPIDO =====
+    const NUMERO = '573171534659';
+    const notif = document.getElementById('notificacion');
+    function mostrarNotif() {
+      notif.classList.add('visible');
+      setTimeout(() => notif.classList.remove('visible'), 2800);
+    }
+    document.getElementById('btnFormRapido').addEventListener('click', () => {
+      const nombre = document.getElementById('rapidoNombre').value.trim();
+      const telefono = document.getElementById('rapidoTelefono').value.trim();
+      const ciudad = document.getElementById('rapidoCiudad').value.trim();
+      const barrio = document.getElementById('rapidoBarrio').value.trim();
+      const servicio = document.getElementById('rapidoServicio').value;
+      const modelo = document.getElementById('rapidoModelo').value.trim();
+      if (!nombre || !telefono || !ciudad) {
+        alert('Completa los campos obligatorios: Nombre, Teléfono y Ciudad.');
+        return;
+      }
+      const msg = `⚡ *SOLICITUD DE TALLER MAX BOGOTÁ*\n\n` +
+        `👤 *Nombre:* ${nombre}\n📱 *Teléfono:* ${telefono}\n📍 *Ciudad:* ${ciudad}\n` +
+        `🏘️ *Barrio:* ${barrio || 'No especificado'}\n🔋 *Tipo de batería:* ${servicio || 'No especificado'}\n` +
+        `🚗 *Modelo de vehículo:* ${modelo || 'No especificado'}`;
+      mostrarNotif();
+      setTimeout(() => {
+        window.open(`https://wa.me/${NUMERO}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+      }, 350);
+    });
+
+    // ===== CONSULTA COBERTURA =====
+    document.getElementById('btnConsultaCobertura').addEventListener('click', () => {
+      const barrio = document.getElementById('consultaBarrio').value.trim();
+      const msg = barrio ? `Hola, quiero consultar cobertura de envío de batería en ${barrio}.` :
+        'Hola, quiero consultar la cobertura de envío de batería en mi zona.';
+      mostrarNotif();
+      setTimeout(() => {
+        window.open(`https://wa.me/${NUMERO}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+      }, 350);
+    });
+
+    // ===== FAQ =====
+    document.querySelectorAll('.faq-pregunta').forEach(p => {
+      p.addEventListener('click', () => {
+        const item = p.parentElement;
+        const wasActive = item.classList.contains('activo');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('activo'));
+        if (!wasActive) item.classList.add('activo');
+      });
+    });
+
+    // ===== COPYRIGHT =====
+    document.getElementById('anioCopyright').textContent = new Date().getFullYear();
+
+    // ===== NAV ACTIVA =====
+    const sections = document.querySelectorAll('section[id], div[id]');
+    const navLinks = document.querySelectorAll('nav ul li a:not(.btn-wsp-nav)');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top <= 150 && rect.bottom >= 150) current = sec.id;
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('activo');
+        if (link.getAttribute('href') === '#' + current) link.classList.add('activo');
+      });
+    });
+
+    // ===== VOLVER ARRIBA =====
+    btnArriba.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
